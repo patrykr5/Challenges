@@ -31,5 +31,15 @@ namespace Challenges.Library.Tests.Challenges
         {
             return arrayChallenge.ArrayOfMultiples(num, length);
         }
+
+        [TestCase(new int[] { 1, 2, 2, 4, 4, 9 }, 8, ExpectedResult = true)]
+        [TestCase(new int[] { 1, 2, 3, 4, 6, 10, 13 }, 9, ExpectedResult = true)]
+        [TestCase(new int[] { 1, 4, 9, 10 }, 12, ExpectedResult = false)]
+        [TestCase(new int[] { 2, 5, 6, 7, 8, 10 }, 12, ExpectedResult = true)]
+        [TestCase(new int[] { 2, 5, 6, 7, 8, 10 }, 18, ExpectedResult = true)]
+        public bool CheckIfExistsPairEqualTargetValue(int[] A, int targetValue)
+        {
+            return arrayChallenge.CheckIfExistsPairEqualTargetValue(A, targetValue);
+        }
     }
 }

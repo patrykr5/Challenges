@@ -16,5 +16,30 @@
 
             return targetArray;
         }
+
+        // Challenge not from Edabit**
+        public bool CheckIfExistsPairEqualTargetValue(int[] A, int targetValue)
+        {
+            int low = 0;
+            int high = A.Length - 1;
+
+            while (low <= high)
+            {
+                if (A[high] > targetValue)
+                {
+                    high -= 1;
+                }
+                else if (A[low] + A[high] == targetValue)
+                {
+                    return true;
+                }
+                else
+                {
+                    low += 1;
+                }
+            }
+
+            return false;
+        }
     }
 }
