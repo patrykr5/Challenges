@@ -37,6 +37,8 @@ namespace Challenges.Library.Tests.Challenges
         [TestCase(new int[] { 1, 4, 9, 10 }, 12, ExpectedResult = false)]
         [TestCase(new int[] { 2, 5, 6, 7, 8, 10 }, 12, ExpectedResult = true)]
         [TestCase(new int[] { 2, 5, 6, 7, 8, 10 }, 18, ExpectedResult = true)]
+        [TestCase(new int[] { 2, 2, 2, 4, 4, 5, 10 }, 8, ExpectedResult = true)]
+        [TestCase(new int[] { 1, 3, 4, 4, 4, 8, 9, 12 }, 12, ExpectedResult = true)]
         public bool CheckIfExistsPairEqualTargetValue(int[] A, int targetValue)
         {
             return arrayChallenge.CheckIfExistsPairEqualTargetValue(A, targetValue);

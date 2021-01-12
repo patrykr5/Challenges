@@ -33,6 +33,11 @@
                 {
                     return true;
                 }
+                else if (low == high)
+                {
+                    high -= 1;
+                    low = 0;
+                }
                 else
                 {
                     low += 1;
