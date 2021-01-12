@@ -2,6 +2,8 @@
 {
     public class ArrayChallenge
     {
+        #region From Edabit
+
         // https://edabit.com/challenge/2QvnWexKoLfcJkSsc
         // Array of Multiples
         public int[] ArrayOfMultiples(int num, int length)
@@ -17,7 +19,10 @@
             return targetArray;
         }
 
-        // Challenge not from Edabit**
+        #endregion From Edabit
+
+        #region Unknown source
+
         // Solution version 1
         /*public bool CheckIfExistsPairEqualTargetValue(int[] A, int targetValue)
         {
@@ -48,7 +53,6 @@
             return false;
         }*/
 
-        // Challenge not from Edabit**
         // Solution version 2
         public bool CheckIfExistsPairEqualTargetValue(int[] A, int targetValue)
         {
@@ -72,7 +76,6 @@
             return false;
         }
 
-        // Challenge not from Edabit**
         public bool CheckIfExistsSamePairEqualTargetValue(int[] A, int targetValue)
         {
             //return A.Count(x => x == targetValue) >= 2; // Solution version 1
@@ -81,7 +84,6 @@
             for (int i = 0; i < A.Length; i++)
             {
                 int currentValue = A[i];
-
                 if (currentValue > targetValue)
                 {
                     break;
@@ -91,7 +93,7 @@
                 {
                     if (currentValue + A[i + 1] != targetValue)
                     {
-                        return false;
+                        break;
                     }
 
                     return true;
@@ -100,5 +102,7 @@
 
             return false;
         }
+
+        #endregion Unknown source
     }
 }
